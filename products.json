@@ -1,0 +1,110 @@
+
+{
+    "groups": [
+      {
+        "id": "0",
+        "name": "Pizzas Especiais",
+        "products": [
+          {
+            "id": "1",
+            "name": "Calabresa",
+            "image": "./assets/image/foto4.jpg",
+            "description": "Massa artesanal, molho ao sugo, muçarela, calabresa, cebola e milho.",
+            "price": 49.9
+          },
+          {
+            "id": "2",
+            "name": "Quatro queijos",
+            "image": "./assets/image/foto5.jpg",
+            "description": "Massa artesanal, molho ao sugo, muçarela, provolone, parmesão e catupiry.",
+            "price": 49.9
+          },
+          {
+            "id": "3",
+            "name": "A moda",
+            "image": "./assets/image/foto6.jpg",
+            "description": "Massa artesanal, molho ao sugo, muçarela, presunto, calabresa, bacon, pimentão, cebola, milho e orégano.",
+            "price": 49.9
+          },
+          {
+            "id": "4",
+            "name": "Margherita",
+            "image": "./assets/image/foto7.jpg",
+            "description": "Massa artesanal, molho ao sugo, muçarela, tomates e manjericão.",
+            "price": 49.9
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "name": "Pizzas Premium",
+        "products": [
+          {
+            "id": "6",
+            "name": "Suprema",
+            "image": "./assets/image/foto4.jpg",
+            "description": "Massa artesanal, molho de tomates italiano, muçarela, peito de peru, cream cheese, geleia de frutas vermelhas, tomatinho cereja e manjericão.",
+            "price": 59.9
+          },
+          {
+            "id": "7",
+            "name": "Frango com Palmito",
+            "image": "./assets/image/foto5.jpg",
+            "description": "Massa artesanal, molho de tomate, muçarela, filé de peito desfiado, palmito, molho à bolonhesa, catupiry e orégano",
+            "price": 59.9
+          },
+          {
+            "id": "8",
+            "name": "4 Carnes",
+            "image": "./assets/image/foto6.jpg",
+            "description": "Massa artesanal, molho de tomate, lombinho canadense, calabresa, mussarela, filé mignon, bacon, cebola, milho e orégano.",
+            "price": 59.9
+          },
+          {
+            "id": "9",
+            "name": "Catuperoni",
+            "image": "./assets/image/foto7.jpg",
+            "description": "Massa artesanal, molho ao sugo, muçarela, pepperoni fatiado fino, catupiry e manjericão.",
+            "price": 59.9
+          },
+          {
+            "id": "10",
+            "name": "Camarão",
+            "image": "./assets/image/foto4.jpg",
+            "description": "Massa artesanal, molho de tomate italiano, muçarela, molho de camarões frescos, tomate cereja e cebolinha.",
+            "price": 59.9
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "name": "Bebidas",
+        "products": [
+          {
+            "id": "12",
+            "name": "Coca-cola 2L",
+            "image": "./assets/image/foto5.jpg",
+            "price": 12.9
+          },
+          {
+            "id": "13",
+            "name": "Fanta 2L",
+            "image": "./assets/image/foto6.jpg",
+            "price": 12.9
+          },
+          {
+            "id": "14",
+            "name": "Mate Couro 2L",
+            "image": "./assets/image/foto7.jpg",
+            "price": 12.9
+          },
+          {
+            "id": "15",
+            "name": "Kuat 2L",
+            "image": "./assets/image/foto4.jpg",
+            "price": 10.9
+          }
+        ]
+      }
+    ]
+  }
