@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Pet Mania</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/63fc93d67b.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <a href="index.html"><img class="img" src="./assets/image/foto1.png" alt="logo" width="50px" height="50px"/></a>
+                  </div>
+                  <div class="col">
+                    <input class="input" type="text"/>
+                  </div>
+                  <div class="col">
+                    <button class="btn-lupa"><i class="bi bi-search"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg></i></button>
+                  </div>
+                  <div class="col">
+                    <i class="bi bi-person-circle"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 30 30">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                      </svg></i>
+                    <button id="btn-cart"><i class="bi bi-cart-fill"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 30 30">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                      </svg></i>
+                      <span class="btn-cart-badge"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+        </header>
+
+        
+        <section class="menu">
+            <ul class="menu-lis">
+              <li class="menu-li">
+                <a href="menu-dog.html">
+                  <div class="img-holder">
+                    <img class="menu-menu" src="./assets/image/foto9.jpg" alt="" width="65px" height="65px">
+                  </div>
+                  <span>Cachorros</span>
+                </a>
+              </li>
+              <li class="menu-li">
+                <a href="menu-cat.html">
+                  <div class="img-holder">
+                    <img class="menu-menu" src="./assets/image/foto10.jpg" alt="" width="65px" height="65px">
+                  </div>
+                  <span>Gatos</span>
+                </a>
+              </li>
+              <li class="menu-li">
+                <a href="menu-bird.html">
+                  <div class="img-holder">
+                    <img class="menu-menu" src="./assets/image/foto11.jpg" alt="" width="65px" height="65px">
+                  </div>
+                  <span>Pássaros</span>
+                </a>
+              </li>
+              <li class="menu-li">
+                <a href="menu-fish.html">
+                  <div class="img-holder">
+                    <img class="menu-menu" src="./assets/image/foto12.jpg" alt="" width="65px" height="65px">
+                  </div>
+                  <span>Peixes</span>
+                </a>
+              </li>
+              <li class="menu-li">
+                <a href="menu-outros.html">
+                  <div class="img-holder">
+                    <img class="menu-menu" src="./assets/image/foto13.jpg" alt="" width="65px" height="65px">
+                  </div>
+                  <span>Outros Pets</span>
+                </a>
+              </li>
+              <li class="menu-li">
+                <a href="menu-casa.html">
+                  <div class="img-holder">
+                    <img class="menu-menu" src="./assets/image/foto14.jpg" alt="" width="65px" height="65px">
+                  </div>
+                  <span>Casa e Jardim</span>
+                </a>
+              </li>
+            </ul>
+          </section>
+
+        <section>
+            <h2 class="category">Categorias</h2>
+            <ul data-id="-4" class="subcategory-list-vitrine">
+                <li class="subcategoria">
+                    <a class="categorias" href="sub-ração.html">Ração
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </li>
+                <li class="subcategoria">
+                    <a class="categorias" href="sub-petisco.html">Petiscos e Ossos
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </li>
+                <li class="subcategoria">
+                    <a class="categorias" href="sub-tapete.html">Tapetes, Fraldas e Banheiros
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </li>
+                <li class="subcategoria">
+                    <a class="categorias" href="sub-farmacia.html">Farmácia
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </li>
+                <li class="subcategoria">
+                    <a class="categorias" href="sub-brinquedo.html">Brinquedos
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </li>
+                <li class="subcategoria">
+                    <a class="categorias" href="sub-coleira.html">Coleiras, Guias e Peitorais
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </li>
+                <li class="subcategoria">
+                    <a class="categorias" href="sub-beleza.html">Beleza e Limpeza
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </li>
+                <li class="subcategoria">
+                    <a class="categorias" href="sub-cama.html">Camas e Cobertores
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </li>
+                <li class="subcategoria">
+                    <a class="categorias" href="sub-casa.html">Casas e Tocas
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </li>
+                <li class="subcategoria">
+                    <a class="categorias" href="sub-acessorio.html">Acessórios de Alimentação
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </li>
+                <li class="subcategoria">
+                    <a class="categorias" href="sub-transporte.html">Acessórios de Transporte
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </li>
+                <li class="subcategoria">
+                    <a class="categorias" href="sub-grades.html">Portões, Grades e Escadas
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </li>
+                <li class="subcategoria">
+                    <a class="categorias" href="sub-roupas.html">Roupas
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </li>
+                <li class="subcategoria">
+                    <a class="categorias" href="sub-adestramento.html">Adestramento e Comportamento
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </li>
+            </ul>
+            <h1 class="rodape"> Cachorro</h1>
+        </section>
+
+        <footer>
+            <section class="footer-vermelho">
+                <p>Formas de pagamento</p>
+                <img class="logo1" src="./assets/image/MasterCard-Logo.png" width="30px"/>
+                <img class="logo" src="./assets/image/visa-logo.png" width="30px"/>
+                <img class="logo" src="./assets/image/elo-logo.png" width="30px"/>
+                <img class="logo" src="./assets/image/boleto-bancario.jpg" width="30px">
+                <img class="logo" src="./assets/image/pix.jpg" width="30px"> 
+                <img class="redes" src="./assets/image/whatsapp.png" width="25px"/> 
+                <img class="redes1" src="./assets/image/facebook.png" width="25px"/> 
+                <img class="redes1" src="./assets/image/instagram.png" width="25px"/>
+            </section>
+            <p class="footer">Pet Mania S.A</p>
+            <p class="footer">CNPJ: 00.000.000/0000-00</p>
+            <p class="footer">Av. Mauá 1308 ,  Zona 03, Maringá  - PR, 87050-020</p>
+            <p class="footer">Compra segura</p>
+            <p class="footer">A Pet Mania garante segurança para suas informações pessoais e financeiras</p>
+            <h6 class="footer">Copyright 2022 © Todos os direitos reservados à Pet Mania</h6>
+        </footer>
+        <aside class="cart-sidebar">
+            <button id="btn-close-cart">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+              <div id="empty-cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <p class="h2">Sua sacola está vazia.</p>
+              </div>
+              <div id="cart-with-products">
+                <p class="h2">Resumo do pedido:</p>
+                <ul>
+                </ul>
+                <button class="btn btn-outline" id="btn-add-more">Adicionar mais itens</button>
+                <a class="btn btn-main" href="fazer-pedido.html">Fazer pedido</a>
+              </div>
+        </aside>
+        <script src="./assets/javascript/scripts.js"></script>
+    </body>
+</html>

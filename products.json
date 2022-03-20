@@ -3,106 +3,93 @@
     "groups": [
       {
         "id": "0",
-        "name": "Pizzas Especiais",
+        "name": "Produtos para Cachorros",
         "products": [
           {
             "id": "1",
-            "name": "Calabresa",
+            "name": "Ração",
             "image": "./assets/image/foto4.jpg",
-            "description": "Massa artesanal, molho ao sugo, muçarela, calabresa, cebola e milho.",
-            "price": 49.9
+            "description": "Ração Premier Raças Específicas Shih Tzu para Cães Filhotes"
           },
           {
             "id": "2",
-            "name": "Quatro queijos",
+            "name": "Ração úmida",
             "image": "./assets/image/foto5.jpg",
-            "description": "Massa artesanal, molho ao sugo, muçarela, provolone, parmesão e catupiry.",
-            "price": 49.9
+            "description": "Ração Premier Raças Específicas Shih Tzu para Cães Filhotes"
           },
           {
             "id": "3",
-            "name": "A moda",
+            "name": "Tapete higiênico",
             "image": "./assets/image/foto6.jpg",
-            "description": "Massa artesanal, molho ao sugo, muçarela, presunto, calabresa, bacon, pimentão, cebola, milho e orégano.",
-            "price": 49.9
+            "description": "Ração Premier Raças Específicas Shih Tzu para Cães Filhotes"
           },
           {
             "id": "4",
-            "name": "Margherita",
+            "name": "Brinquedos",
             "image": "./assets/image/foto7.jpg",
-            "description": "Massa artesanal, molho ao sugo, muçarela, tomates e manjericão.",
-            "price": 49.9
+            "description": "Ração Premier Raças Específicas Shih Tzu para Cães Filhotes"
           }
         ]
       },
       {
         "id": "5",
-        "name": "Pizzas Premium",
+        "name": "Produtos para Gatos",
         "products": [
           {
             "id": "6",
-            "name": "Suprema",
+            "name": "Ração",
             "image": "./assets/image/foto4.jpg",
-            "description": "Massa artesanal, molho de tomates italiano, muçarela, peito de peru, cream cheese, geleia de frutas vermelhas, tomatinho cereja e manjericão.",
-            "price": 59.9
+            "description": "Ração Premier Raças Específicas Shih Tzu para Cães Filhotes"
           },
           {
             "id": "7",
-            "name": "Frango com Palmito",
+            "name": "Areias",
             "image": "./assets/image/foto5.jpg",
-            "description": "Massa artesanal, molho de tomate, muçarela, filé de peito desfiado, palmito, molho à bolonhesa, catupiry e orégano",
-            "price": 59.9
+            "description": "Ração Premier Raças Específicas Shih Tzu para Cães Filhotes"
           },
           {
             "id": "8",
-            "name": "4 Carnes",
+            "name": "Ração umida",
             "image": "./assets/image/foto6.jpg",
-            "description": "Massa artesanal, molho de tomate, lombinho canadense, calabresa, mussarela, filé mignon, bacon, cebola, milho e orégano.",
-            "price": 59.9
+            "description": "Ração Premier Raças Específicas Shih Tzu para Cães Filhotes"
           },
           {
             "id": "9",
-            "name": "Catuperoni",
+            "name": "Caixa de areia",
             "image": "./assets/image/foto7.jpg",
-            "description": "Massa artesanal, molho ao sugo, muçarela, pepperoni fatiado fino, catupiry e manjericão.",
-            "price": 59.9
+            "description": "Ração Premier Raças Específicas Shih Tzu para Cães Filhotes"
           },
           {
             "id": "10",
-            "name": "Camarão",
+            "name": "Brinquedo",
             "image": "./assets/image/foto4.jpg",
-            "description": "Massa artesanal, molho de tomate italiano, muçarela, molho de camarões frescos, tomate cereja e cebolinha.",
-            "price": 59.9
+            "description": "Ração Premier Raças Específicas Shih Tzu para Cães Filhotes"
           }
         ]
       },
       {
         "id": "11",
-        "name": "Bebidas",
+        "name": "Produtos para Pássaros",
         "products": [
           {
             "id": "12",
-            "name": "Coca-cola 2L",
-            "image": "./assets/image/foto5.jpg",
-            "price": 12.9
+            "name": "Ração",
+            "image": "./assets/image/foto5.jpg"
           },
           {
             "id": "13",
-            "name": "Fanta 2L",
-            "image": "./assets/image/foto6.jpg",
-            "price": 12.9
+            "name": "Gaiola",
+            "image": "./assets/image/foto6.jpg"
           },
           {
             "id": "14",
-            "name": "Mate Couro 2L",
-            "image": "./assets/image/foto7.jpg",
-            "price": 12.9
+            "name": "Medicamento",
+            "image": "./assets/image/foto7.jpg"
           },
           {
             "id": "15",
-            "name": "Kuat 2L",
-            "image": "./assets/image/foto4.jpg",
-            "price": 10.9
+            "name": "Bebedouro",
+            "image": "./assets/image/foto4.jpg"
           }
         ]
       }

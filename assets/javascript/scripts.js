@@ -1,62 +1,61 @@
-const cartSidebarEl = document.querySelector("cart-sidebar");
+const cartSidebarEl = document.querySelector('.cart-sidebar');
 function openSidebar (event) {
   event.stopPropagation()
-  cartSidebarEl.classList.add("cart-sidebar-open");
+  cartSidebarEl.classList.add('cart-sidebar-open');
 }
-function closeSidebar () {
-  cartSidebarEl.classList.remove("cart-sidebar-open");
+function closeSidebar(){
+  cartSidebarEl.classList.remove('cart-sidebar-open');
 }
-const btnCartEl = document.getElementById("btn-cart");
-btnCartEl.addEventListener("click", openSidebar);
-    const btnCloseCartEl = document.querySelector("#btn-close-cart");
-    btnCloseCartEl.addEventListener("click", closeSidebar);
-    document.addEventListener("click", closeSidebar);
-    cartSidebarEl.addEventListener("click", (event) => {
-      event.stopPropagation();
-    })
-    const btnAddMore = document.querySelector('#btn-add-more')
-    btnAddMore?.addEventListener('click', closeSidebar)
+const btnCartEl = document.getElementById('btn-cart');
+btnCartEl.addEventListener('click', openSidebar)
+const btnCloseCartEl = document.querySelector('#btn-close-cart');
+btnCloseCartEl.addEventListener('click', closeSidebar);
+document.addEventListener('click', closeSidebar)
+cartSidebarEl.addEventListener('click', (event) => {
+  event.stopPropagation();
+})
+const btnAddMore = document.querySelector('#btn-add-more')
+btnAddMore.addEventListener('click', closeSidebar)
 
 const groupsRootEl = document.querySelector('#groups-root')
 const fetchProducts = () => {
-  fetch('/products.json')
+  fetch('products.json')
     .then(res => res.json())
     .then(data => {
-      groupsRootEl.innerHTML = ''
-      data.groups.forEach((group) => {
-        const groupSectionEl = getSectionElement(group)
+      for (let contador = 0;contador < data.groups.length;contador++) {
+        const groupSectionEl = getSectionElement(data.groups[contador])
         groupsRootEl.appendChild(groupSectionEl)
-      })
+      }
     })
     .catch(() => {
-      groupsRootEl.innerHTML = '<p class="error-alert">Falha ao buscar produtos. Por favor, tente novamente.</p>'
-    })
+    groupsRootEl.innerHTML = '<p class="error-alert">Falha ao buscar produtos. Por favor, tente novamente.</p>'
+  })
 }
 const getSectionElement = (group) => {
-  const sectionEl = document.createElement('section')
-  const sectionTitleEl = document.createElement('h2')
+  const sectionEl = document.createElement('section');
+  const sectionTitleEl = document.createElement('h2');
   sectionTitleEl.textContent = group.name
-  sectionEl.appendChild(sectionTitleEl)
-  const productsGridEl = document.createElement('div')
-  productsGridEl.classList.add('products-grid')
-  sectionEl.appendChild(productsGridEl)
+  sectionEl.appendChild(sectionTitleEl);
+  const productsGridEl = document.createElement('div');
+  productsGridEl.classList.add('products-grid');
+  sectionEl.appendChild(productsGridEl);
   group.products.forEach((product) => {
-    const cardWrapEl = document.createElement('article')
-    cardWrapEl.classList.add('card')
+    const cardWrapEl = document.createElement('article');
+    cardWrapEl.classList.add('card');
     cardWrapEl.innerHTML = `
-      <img src="${product.image}" alt="${product.name}" width="120" height="150" />
+      <img src="${product.image}" alt="${product.name}" width="316" height="193" />
       <div class="card-content">
         <h3>${product.name}</h3>
-        <p class="price">R$ ${product.price.toLocaleString('pt-br', { minimumFractionDigits: 2 })}</p>
         ${product.description ? `<p>${product.description}</p>` : ''}
         <button class="btn btn-main">Adicionar</button>
       </div>
     `
-    const btnAddCartEl = cardWrapEl.querySelector('button')
+    const btnAddCartEl = cardWrapEl.querySelector('button');
     btnAddCartEl.addEventListener('click', () => {
       addToCart(product)
     })
-    productsGridEl.appendChild(cardWrapEl)
+    // btnAddCartEl.addEventListener('click', openSidebar);
+    productsGridEl.appendChild(cardWrapEl);
   })
   return sectionEl
 }
@@ -114,7 +113,6 @@ const updateItemQty = (id, newQty) => {
   }
 }
 const handleCartUpdate = (renderItens = true) => {
-  // Salva carrinho no localstorage
   const productsCartString = JSON.stringify(productsCart)
   localStorage.setItem('productsCart', productsCartString)
   const emptyCartEl = document.querySelector('#empty-cart')
@@ -122,23 +120,14 @@ const handleCartUpdate = (renderItens = true) => {
   const cartProductsListEl = cartWithProductsEl.querySelector('ul')
   const cartBadgeEl = document.querySelector('.btn-cart-badge')
   if (productsCart.length > 0) {
-    // Calcula totais
+    cartBadgeEl.classList.add('btn-cart-badge-show')
     let total = 0
-    let totalPrice = 0
     productsCart.forEach(product => {
       total = total + product.qty
-      totalPrice = totalPrice + product.price * product.qty
     })
-    // Atualizar a badge
-    cartBadgeEl.classList.add('btn-cart-badge-show')
     cartBadgeEl.textContent = total
-    // Atualizo o total do carrinho
-    const cartTotalEl = document.querySelector('.cart-total p:last-child')
-    cartTotalEl.textContent = totalPrice.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
-    // Exibir carrinho com produtos
     cartWithProductsEl.classList.add('cart-with-products-show')
     emptyCartEl.classList.remove('empty-cart-show')
-    // Exibir produtos do carrinho na tela
     if (renderItens) {
       cartProductsListEl.innerHTML = ''
       productsCart.forEach((product) => {
@@ -147,7 +136,6 @@ const handleCartUpdate = (renderItens = true) => {
           <img src="${product.image}" alt="${product.name}" width="70" height="70" />
           <div>
             <p class="h3">${product.name}</p>
-            <p class="price">R$ ${product.price.toLocaleString('pt-br', { minimumFractionDigits: 2 })}</p>
           </div>
           <input class="form-input" type="number" value="${product.qty}" />
           <button>
@@ -174,22 +162,19 @@ const handleCartUpdate = (renderItens = true) => {
       })
     }
   } else {
-    // Esconder badge
     cartBadgeEl.classList.remove('btn-cart-badge-show')
-    // Exibir carrinho vazio
     emptyCartEl.classList.add('empty-cart-show')
     cartWithProductsEl.classList.remove('cart-with-products-show')
+    
   }
 }
 handleCartUpdate()
-// Atualiza carrinho se outra aba
 window.addEventListener('storage', (event) => {
   if (event.key === 'productsCart') {
     productsCart = JSON.parse(event.newValue)
     handleCartUpdate()
   }
 })
-
 const formCheckoutEl = document.querySelector('.form-checkout')
 formCheckoutEl?.addEventListener('submit', (event) => {
   event.preventDefault()
@@ -200,11 +185,10 @@ formCheckoutEl?.addEventListener('submit', (event) => {
   let text = 'Confira o pedido abaixo:\n---------------------------------------\n\n'
   let total = 0
   productsCart.forEach(product => {
-    text += `*${product.qty}x ${product.name}* - ${product.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}\n`
-    total += product.price * product.qty
+    text += `*${product.qty}x ${product.name}*\n`
+    total += product.qty
   })
   text += '\n*Taxa de entrega:* A combinar\n'
-  text += `*Total: ${total.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}*`
   text += '\n---------------------------------------\n\n'
   text += `*${formCheckoutEl.elements['input-name'].value}*\n`
   text += `${formCheckoutEl.elements['input-phone'].value}\n\n`
